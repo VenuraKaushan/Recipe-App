@@ -27,9 +27,6 @@ app.use(cookieParser());
 // config the urlEncoded middleware
 app.use(express.urlencoded({extended : false}));
 
-// const URL = process.env.ORIGIN_URL;
-
-// app.use(cors({ credentials: true, origin: URL }));
 
 app.use((req, res, next) => {
   console.log(`${req.method} =====> URL: ${req.url}`);
