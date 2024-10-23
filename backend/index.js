@@ -10,10 +10,6 @@ const app = express();
 
 const PORT = process.env.PORT || 6001;
 
-//CORS [allows the Vercel requests]
-// app.use(cors({origin: ['https://recipe-app-frontend-hazel.vercel.app'],credentials: true, 
-// }));
-
 
 // CORS [allow the pass the cookies to orin localhost]
 app.use(cors({credentials : true,origin : 'https://recipe-app-frontend-hazel.vercel.app'}));
