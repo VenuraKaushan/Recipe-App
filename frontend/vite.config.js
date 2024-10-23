@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://recipe-app-server-seven.vercel.app/",
+        target: "https://recipe-app-server-seven.vercel.app",
         secure: false,
       },
     },
