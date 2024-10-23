@@ -41,7 +41,6 @@ function SignInPage() {
         navigate("/home");
       }
     } catch (error) {
-      console.log(error.message)
       dispatch(signInFailure(error.message(error.message)));
     }
   };

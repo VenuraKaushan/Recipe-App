@@ -9,7 +9,6 @@ export const recipeController = {
         "https://www.themealdb.com/api/json/v1/1/categories.php"
       );
       const categories = response.data.categories;
-      console.log(categories)
 
       if (!categories) {
         return res.status(404).json({ message: "Categories not found" });
@@ -27,7 +26,6 @@ export const recipeController = {
 export const addFavorite = async (req, res) => {
   const { idCategory, strCategory, strCategoryThumb, strCategoryDescription } =
     req.body;
-  console.log(req.user);
 
   try {
     const newFavorite = new Receipe({
@@ -50,7 +48,6 @@ export const getAllFavourite = async (req, res) => {
     const favouriteReceipe = await Receipe.find({ userId: req.user }); // Only fetch recipes created by the authenticated user
     res.status(200).json(favouriteReceipe);
   } catch (error) {
-    // console.log(error.message)
     res
       .status(500)
       .json({ message: "Failed to fetch Receipe", error: error.message });

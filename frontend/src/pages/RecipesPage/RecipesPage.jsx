@@ -22,7 +22,6 @@ function RecipesPage() {
         const response = await axios.get(
           "http://localhost:3001/receipe/getAllRecipes"
         );
-        console.log(response.data)
         setCategories(response.data.categories);
         setLoading(false);
       } catch (error) {

@@ -10,6 +10,14 @@ const app = express();
 
 const PORT = process.env.PORT || 6001;
 
+//CORS [allows the Vercel requests]
+app.use(cors({
+  origin: ['https://recipe-app-server-seven.vercel.app'],
+  methods : ['POST','GET'],
+  credentials : true
+
+}))
+
 // CORS [allow the pass the cookies to orin localhost]
 app.use(cors({credentials : true,origin : 'http://localhost:5173'}));
 
