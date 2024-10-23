@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 6001;
 //CORS [allows the Vercel requests]
 app.use(cors({
   origin: ['https://recipe-app-frontend-hazel.vercel.app'],
-  methods : ['POST','GET'],
-  credentials : true
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, 
+}));
 
-}))
 
 // CORS [allow the pass the cookies to orin localhost]
 // app.use(cors({credentials : true,origin : 'https://recipe-app-frontend-hazel.vercel.app'}));
