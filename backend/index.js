@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 6001;
 
 //CORS [allows the Vercel requests]
 app.use(cors({
-  origin: ['https://recipe-app-server-seven.vercel.app'],
+  origin: ['https://recipe-app-frontend-hazel.vercel.app/'],
   methods : ['POST','GET'],
   credentials : true
 
